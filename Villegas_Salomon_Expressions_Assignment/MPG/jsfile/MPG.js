@@ -64,7 +64,7 @@ console.log("The MPG Average for the month is", MPG_Average);
 
 //------------------------------------------------------------------------------------//
 
-alert(" You have spent an average of " + Expenses + " this month on fuel. \n Based on your input, your " +
+alert(" You have spent an average of " + Expenses + " this month, per gallon, on fuel. \n Based on your input, your " +
     "car has a reading of " + MPG_Average + " MPG this month." );
 //Pop up prompt displaying results of user's input.
 
