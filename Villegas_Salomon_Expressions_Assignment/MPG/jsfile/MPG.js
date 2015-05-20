@@ -1,3 +1,6 @@
+/**
+ * Created by Salomon on 5/20/15.
+ */
 // Expressions Assignment Created by Salomon Villegas on 5/20/15.
 
 // This calculator will calculate the MPG rating over a Month period.
@@ -20,9 +23,9 @@ console.log ("The average miles the user traveled is ", Miles);
 //------------------------------------------------------------------------------------//
 
 var Cost_Array = [Number(prompt("Enter cost of fuel, per gallon for week 1. ")),
-    Number(prompt(" Enter cost of fuel, per gallon for week 2. ")),
-    Number(prompt(" Enter cost of fuel, per gallon for week 3. ")),
-    Number(prompt(" Enter cost of fuel, per gallon for week 4. "))];
+    Number(prompt(" Enter cost of fuel, per gallon, for week 2. ")),
+    Number(prompt(" Enter cost of fuel, per gallon, for week 3. ")),
+    Number(prompt(" Enter cost of fuel, per gallon, for week 4. "))];
 //This array is where the user inputs the cost of fuel, per gallon for each week
 //to calculate what has been the month's average per gallon cost.
 
@@ -60,6 +63,10 @@ var MPG_Average =  Miles / Gallons;
 console.log("The MPG Average for the month is", MPG_Average);
 
 //------------------------------------------------------------------------------------//
+
+alert(" You have spent an average of " + Expenses + " this month on fuel. \n Based on your input, your " +
+    "car has a reading of " + MPG_Average + " MPG this month." );
+//Pop up prompt displaying results
 
 
 
