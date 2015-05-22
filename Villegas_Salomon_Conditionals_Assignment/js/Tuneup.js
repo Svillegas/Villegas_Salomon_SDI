@@ -32,7 +32,7 @@ console.log("The total optimal tire pressure for the Rear axle is", Rear_axle_op
 
 // The total optimal tire pressure for the rear axle according to the calculation made in the log is
 
-var User_Name = prompt("Hello! Please enter your name.")
+var User_Name = prompt("Hello! Please enter your name.");
 console.log("The name of the user is", User_Name);
 
 
@@ -82,7 +82,7 @@ console.log("user has continued");
 /*This block of code will ask the user to enter the information for their current tire pressure in the front axle
 and compare it to the optimal value */
 
-var no_input = 0
+var no_input = 0;
     console.log(no_input);
 
 var Front_axle_User = [Number(prompt(" Enter pressure reading for Front Right wheel. ")) +
@@ -103,8 +103,8 @@ if(Front_axle_User >= Front_axle_optimal){
 
     // if the tire pressure is lower than the optimal the user is asked to recheck and submit again the values.
 
-    var New_reading = prompt(" Hmm... It seems your Front axle tire pressure is not set. Please check \n" +
-    " your reading one more time and enter the new reading below. ");
+    var New_reading = prompt(" Hmm... It seems your Front axle tire pressure is not set. Please check" +
+    " your reading one more time for both tires, add them up and enter the new reading below. ");
 
 console.log("User has corrected the tire pressure readings for the front axle and its now", New_reading)
 
@@ -131,7 +131,7 @@ console.log("user continued to Rear axle calculation");
 and compare it to the optimal value */
 
 
-var no_input = 0
+var no_input = 0;
     console.log(no_input);
 
 var Rear_axle_User = [Number(prompt(" Enter pressure reading for Rear Right wheel. ")) +
@@ -150,12 +150,12 @@ if(Rear_axle_User >= Rear_axle_optimal){
 
     // if the tire pressure is lower than the optimal the user is asked to recheck and submit again the values.
 
-    var New_reading_2 = prompt(" Hmm... It seems your Front axle tire pressure is not set. Please check \n" +
-        " your reading one more time and enter the new reading below. ");
+    var New_reading_2 = prompt(" Hmm... It seems your Front axle tire pressure is not set. Please check" +
+        " your reading one more time for both tires, add them up and enter the new reading below. ");
 
     console.log("User has corrected the tire pressure readings for the rear axle and its now", New_reading_2)
 
-}else{
+}else {
 
     //if nothing is entered even with the warning the script is stopped
 
@@ -167,6 +167,67 @@ if(Rear_axle_User >= Rear_axle_optimal){
 }
 
 ///--------------/--/-//
+
+/* Here if the front axles and rear axle readings are optimal,
+ either on the main prompts or secondary prompts, then the users gets a good message. If not, he is forced to rerun the program.
+  */
+
+if((Rear_axle_User >= Rear_axle_optimal && Front_axle_User >= Front_axle_optimal) || (New_reading >= Front_axle_optimal && New_reading_2 >= Rear_axle_optimal)){
+
+    alert("Your vehicles tire pressure is optimal.")
+    console.log ("tires are optimal")
+}else{
+
+    alert( "Please, recheck your tire's pressure and refresh this page to restart this script")
+    console.log (" User has to recheck tire pressure.")
+    //this advises user to restart script
+}
+
+//----------------------------------------------------------------------------//
+
+//Variables for MPG rating
+
+alert("Ok,so now we will be checking your Fuel efficiency (MPG). " +
+    "First step is to fill up tank because it is key to getting an accurate reading.");
+//greeting to mpg
+
+var Gallons_A = prompt("Now that you have filled up enter the number of gallons that it took to occupy the tank bellow.");
+    console.log("The gallons that took the user to fill up the tank were", Gallons_A);
+
+var Mileage_A = prompt("Before you even leave the gas station, Record the current mileage you have on the odometer.");
+    console.log("user has entered " + Mileage_A + " miles for Mileage A");
+
+var Gallons_B = prompt("Now that you have driven and have almost emptied the tank" +
+                        " record the number of gallons that it took to occupy the tank this time.");
+    console.log("The gallons that took the user to fill up the tank on trip B were", Gallons_B);
+
+var Mileage_B = prompt("Again, Before you even leave the gas station, Record the new mileage you have on the odometer.");
+    console.log("user has entered " + Mileage_B + " miles for Mileage B")
+
+// Readings are subtracted to obtain The length of the actual trip
+
+if (Mileage_A > Mileage_B){
+
+    console.log ("User has entered the mileage readings in the correct format");
+
+}else{
+
+     var New_Reading_3 = prompt(" Oops, seems like you entered the trip mileage in the incorrect format. " +
+           " Please, Subtract Mileage B from Mileage B and enter that reading below.")
+
+        console.log("user has entered corrected mileage")
+}
+
+//var MPG = 
+
+
+
+
+
+
+
+
+
 
 
 
