@@ -270,7 +270,35 @@ alert(Passed_inspection);
 console.log(Passed_inspection);
 // this alert prints out whther the user passed inspection or not
 
+/*
 
+The optimal tire pressure for the Right front wheel is 28
+Tuneup.js:13 The optimal tire pressure for the Left front wheel is 28
+Tuneup.js:18 The optimal tire pressure for the Right rear wheel is 30
+Tuneup.js:21 The optimal tire pressure for the Left rear wheel is 30
+Tuneup.js:26 The total optimal tire pressure for the Front axle is 56
+Tuneup.js:31 The total optimal tire pressure for the Rear axle is 60
+Tuneup.js:36 The name of the user is Salomon
+Tuneup.js:78 user has continued
+Tuneup.js:86 0
+Tuneup.js:90  the total user's tire pressure is  Array[1]
+Tuneup.js:100 user successfully filled and measured tire pressure for the front axle
+Tuneup.js:124 user continued to Rear axle calculation
+Tuneup.js:135 0
+Tuneup.js:139  the total user's tire pressure is  Array[1]
+Tuneup.js:147 user successfully filled and measured tire pressure for the rear axle
+Tuneup.js:178 tires are optimal
+Tuneup.js:195 The gallons that took the user to fill up the tank were 10
+Tuneup.js:200 user has entered 1000 miles for Mileage A
+Tuneup.js:206 The gallons that took the user to fill up the tank on trip B were 9
+Tuneup.js:211 user has entered 1500 miles for Mileage B
+Tuneup.js:218 User has entered the mileage readings in the correct format
+Tuneup.js:233  the MPG for the user is  55.55555555555556  MPG.
+Tuneup.js:238 optimal mpg is 20
+Tuneup.js:246 User has entered the mileage readings in the correct format
+Tuneup.js:270  You have passed Inspection
+
+/*
 
 
 
