@@ -189,23 +189,29 @@ if((Rear_axle_User >= Rear_axle_optimal && Front_axle_User >= Front_axle_optimal
 
 alert("Ok, so now we will be checking your Fuel efficiency (MPG). " +
     "First step is to fill up tank because it is key to getting an accurate reading.");
-//greeting to mpg
+//greeting to MPG
 
 var Gallons_A = prompt("Now that you have filled up enter the number of gallons that it took to occupy the tank below.");
     console.log("The gallons that took the user to fill up the tank were", Gallons_A);
 
+    // user enters mileage for trip a
+
 var Mileage_A = prompt("Before you even leave the gas station, Record the current mileage you have on the odometer.");
     console.log("user has entered " + Mileage_A + " miles for Mileage A");
+
+    // user enters mileage for trip a
 
 var Gallons_B = prompt("Now that you have driven and have almost emptied the tank" +
                         " record the number of gallons that it took to occupy the tank this time.");
     console.log("The gallons that took the user to fill up the tank on trip B were", Gallons_B);
 
+    // user enters gallons for trip b
+
 var Mileage_B = prompt("Again, Before you even leave the gas station, Record the new mileage you have on the odometer.");
     console.log("user has entered " + Mileage_B + " miles for Mileage B")
 
+    // user enters mileage for trip b
 
-// Readings are subtracted to obtain The length of the actual trip
 
 if (Mileage_A < Mileage_B){
 
@@ -216,6 +222,8 @@ if (Mileage_A < Mileage_B){
      var New_Reading_3 = prompt(" Oops, seems like you entered the trip mileage in the incorrect format. " +
            " Please, Subtract Mileage B from Mileage B and enter that reading below.")
 
+     //this variable is set when the user does not follow the prompt correctly
+
         console.log("user has entered corrected mileage")
 }
 
@@ -224,8 +232,12 @@ if (Mileage_A < Mileage_B){
 var MPG = (Mileage_B - Mileage_A)/Gallons_B;
 console.log(" the MPG for the user is ", MPG, " MPG." );
 
+// Readings are subtracted to obtain The length of the actual trip
+
 var optimal_mpg = 20
 console.log ("optimal mpg is 20")
+
+// this is the variable that sets the optimal MPG rating
 
 
 if(MPG >= optimal_mpg){
@@ -233,11 +245,15 @@ if(MPG >= optimal_mpg){
     alert(" Your Mpg is optimal! it has a rating of " + MPG + " MPG.")
     console.log ("User has entered the mileage readings in the correct format")
 
+    // this alert tells the user that his mpg rating is optimal and also displays it
+
 }else{
 
     alert("Since your fuel efficiency rating is of " + MPG + " MPG, it is suggested that you check" +
         " you oxygen sensors, fuel filter and air filters to increase your vehicle's rating")
     console.log("user is made suggestion")
+
+    // this alert suggests to the user what he should do to increase his fuel efficiency rating
 
 }
 
@@ -252,6 +268,7 @@ var Passed_inspection =
 
 alert(Passed_inspection);
 console.log(Passed_inspection);
+// this alert prints out whther the user passed inspection or not
 
 
 
