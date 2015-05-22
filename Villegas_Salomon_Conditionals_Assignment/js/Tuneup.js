@@ -47,7 +47,7 @@ console.log("The name of the user is", User_Name);
 
 if(User_Name = User_Name){
 
-    var r = confirm(("Thank you ") + (User_Name) + (" for using this handy tool that will help you check for optimal tire pressure."));
+    var r = confirm(("Thank you ") + (User_Name) + (", for using this handy tool that will help you check if you can pass inspection."));
     if (r == true) {
         x = "You cancelled the request";
     } else {
@@ -187,11 +187,11 @@ if((Rear_axle_User >= Rear_axle_optimal && Front_axle_User >= Front_axle_optimal
 
 //Variables for MPG rating
 
-alert("Ok,so now we will be checking your Fuel efficiency (MPG). " +
+alert("Ok, so now we will be checking your Fuel efficiency (MPG). " +
     "First step is to fill up tank because it is key to getting an accurate reading.");
 //greeting to mpg
 
-var Gallons_A = prompt("Now that you have filled up enter the number of gallons that it took to occupy the tank bellow.");
+var Gallons_A = prompt("Now that you have filled up enter the number of gallons that it took to occupy the tank below.");
     console.log("The gallons that took the user to fill up the tank were", Gallons_A);
 
 var Mileage_A = prompt("Before you even leave the gas station, Record the current mileage you have on the odometer.");
@@ -204,9 +204,10 @@ var Gallons_B = prompt("Now that you have driven and have almost emptied the tan
 var Mileage_B = prompt("Again, Before you even leave the gas station, Record the new mileage you have on the odometer.");
     console.log("user has entered " + Mileage_B + " miles for Mileage B")
 
+
 // Readings are subtracted to obtain The length of the actual trip
 
-if (Mileage_A > Mileage_B){
+if (Mileage_A < Mileage_B){
 
     console.log ("User has entered the mileage readings in the correct format");
 
@@ -218,7 +219,39 @@ if (Mileage_A > Mileage_B){
         console.log("user has entered corrected mileage")
 }
 
-//var MPG = 
+// Here the MPG is calculated accrodint to the results above.
+
+var MPG = (Mileage_B - Mileage_A)/Gallons_B;
+console.log(" the MPG for the user is ", MPG, " MPG." );
+
+var optimal_mpg = 20
+console.log ("optimal mpg is 20")
+
+
+if(MPG >= optimal_mpg){
+
+    alert(" Your Mpg is optimal! it has a rating of " + MPG + " MPG.")
+    console.log ("User has entered the mileage readings in the correct format")
+
+}else{
+
+    alert("Since your fuel efficiency rating is of " + MPG + " MPG, it is suggested that you check" +
+        " you oxygen sensors, fuel filter and air filters to increase your vehicle's rating")
+    console.log("user is made suggestion")
+
+}
+
+// this block of code will tell us if the inspection was passed or not by comparing all of the above results.
+
+var Passed_inspection =
+
+
+([((Rear_axle_User >= Rear_axle_optimal && Front_axle_User >= Front_axle_optimal) ||
+(New_reading >= Front_axle_optimal && New_reading_2 >= Rear_axle_optimal))] && (MPG >= optimal_mpg)) ?
+    " You have passed Inspection" : "You have Failed Inspection"
+
+alert(Passed_inspection);
+console.log(Passed_inspection);
 
 
 
