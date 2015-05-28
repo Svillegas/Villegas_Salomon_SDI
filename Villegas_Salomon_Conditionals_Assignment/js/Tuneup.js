@@ -143,14 +143,14 @@ var Rear_axle_User = [Number(prompt(" Enter pressure reading for Rear Right whee
 
 if(Rear_axle_User >= Rear_axle_optimal){
 
-    alert("Perfect, The tire pressure on the front end of your car is optimal.")
+    alert("Perfect, The tire pressure on the rear end of your car is optimal.")
     console.log( "user successfully filled and measured tire pressure for the rear axle")
 
 }else if(Rear_axle_User > no_input){
 
     // if the tire pressure is lower than the optimal the user is asked to recheck and submit again the values.
 
-    var New_reading_2 = prompt(" Hmm... It seems your Front axle tire pressure is not set. Please check" +
+    var New_reading_2 = prompt(" Hmm... It seems your rear axle tire pressure is not set. Please check" +
         " your reading one more time for both tires, add them up and enter the new reading below. ");
 
     console.log("User has corrected the tire pressure readings for the rear axle and its now", New_reading_2)
