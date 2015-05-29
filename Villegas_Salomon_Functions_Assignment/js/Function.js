@@ -27,6 +27,7 @@ var V_Name, valid=false;
 while(!valid) {
     V_Name = prompt("Please enter make your vehicle" , "");
     valid = (validation_Req(V_Name) && validation_Req_2(V_Name));
+    //user has to enter text in the prompt otherwise it restarts the prompt
 }
 
 /******
@@ -37,6 +38,7 @@ var Vehicle_VIN, valid=false;
 while(!valid) {
     Vehicle_VIN = prompt("Please enter the vehicle's 17 digit VIN number" , "");
     valid = (validation_Req(Vehicle_VIN) && v_Num(Vehicle_VIN) && valLen(Vehicle_VIN, 17));
+    // user has to enter 17 digit number otherwise it'll restart the prompt
 }
 
 /******
@@ -51,26 +53,34 @@ console.log(" The User's Vin number is: " +Vehicle_VIN+ ".");
 //------------------------------------------------------------------//
 
 //Calculating horse power
+alert("Now we will calculate the Horsepower of a gas fueled vehicle");
 
 
 
-V_HP_total = V_HP(
-    (var V_Name, valid=false;
+
+var V_torque, valid=false;
 while(!valid) {
-    V_Name = prompt("Please enter the torque of your vehicle." , "");
-    valid = (validation_Req(V_Name) && validation_Req_2(V_Name));
-}),
-(var V_Name, valid=false;
-while(!valid) {
-    V_Name = prompt("Please enter the RPMs of your vehicle" , "");
-    valid = (validation_Req(V_Name) && validation_Req_2(V_Name));
-});
+    V_torque = prompt("Please enter the vehicle's amount of torque", "");
+    valid = (validation_Req(V_torque) && v_Num(V_torque) && valLen(V_torque, 3))
 
-)
+    //user enters value for torque 100-999 otherwise it restarts the prompt
+}
+
+
+var V_RPM, valid=false;
+while(!valid) {
+    V_RPM = prompt("Please enter the vehicle's amount of RPMs", "");
+    valid = (validation_Req(V_RPM) && v_Num(V_RPM) && valLen(V_RPM, 4))
+
+    //user enters value for rpms 1000-9999 otherwise it restarts the prompt
+};
+
+V_HP_total = V_HP(V_torque, V_RPM);
 
 function V_HP( t, r ){
 
     var Uni_reading = 5252;
+    // because the equation to calculate HP is torque*rpms/5252 which is just a universal reading to calculate it.
 
 
     var v_calc = (t * r/ Uni_reading);
@@ -82,3 +92,19 @@ function V_HP( t, r ){
 alert("Your vehicle's horsepower is " + V_HP_total + ".");
 
 //-----------------//
+
+//Calculating Horsepower for electric vehicle
+
+alert("Now we will be calculating the horsepower for electric vehicle");
+
+
+
+
+
+//-----------------//
+
+//BMW was entered in the vehicle brand prompt
+//78645312098465132 was entered in the VIN prompt
+//450 was entered in the torque prompt
+// 4500 was entered in the rpms prompt
+// The vehicle's horsepower is 385.56740289413557.
