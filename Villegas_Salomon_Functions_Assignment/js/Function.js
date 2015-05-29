@@ -109,7 +109,7 @@ while(!valid) {
 var V_amps, valid=false;
 while(!valid) {
     V_amps = prompt("Please enter the vehicle's amount of amperage or 'amps' output", "");
-    valid = (validation_Req(V_amps) && v_Num(V_amps) && valLen(V_amps, 3|2))
+    valid = (validation_Req(V_amps) && v_Num(V_amps) && valLen(V_amps, 3))
 
     //user enters value for amps 10-99 otherwise it restarts the prompt
 };
@@ -117,10 +117,35 @@ while(!valid) {
 var V_efficency, valid=false;
 while(!valid) {
     V_efficency = prompt("Please enter the vehicle's efficiency percentage", "");
-    valid = (validation_Req(V_efficency) && v_Num(V_efficency) && valLen(V_efficency, 3|2))
+    valid = (validation_Req(V_efficency) && v_Num(V_efficency) && valLen(V_efficency, 2))
 
     //user enters value for amps 10-99 otherwise it restarts the prompt
 };
+
+//****
+
+var E_HP = function V_HP( v, a, e ){
+
+    var Uni_reading = 746;
+    // because the equation to calculate HP is volts * amps * efficiency/746 which is just a universal reading to calculate it.
+
+    var conv = e/100
+    console.log(e + " is " + conv + " in Decimal form")
+    //does a calculation to transform the percentage input into decimal to be able to input that into the next equation.
+
+
+    var v_calc_2 = (v * a * conv/ Uni_reading);
+    console.log( "The vehicle's horsepower is " + v_calc_2 + ".");
+    //calculation for electric horsepower
+
+    return (v_calc_2);
+};
+
+ var E_HP_total = E_HP(V_volts, V_amps, V_efficency);
+console.log(E_HP_total);
+
+alert("Your vehicle's horsepower is " + E_HP_total + ".");
+
 
 
 
@@ -133,3 +158,10 @@ while(!valid) {
 //450 was entered in the torque prompt
 // 4500 was entered in the rpms prompt
 // The vehicle's horsepower is 385.56740289413557.
+
+//240 was entered in the volts prompt
+// 100 was entered in the amps prompt
+// 80 was entered in the Efficiency prompt
+// 80 was converted to 0.8 for proper calculation
+// The vehicle's horsepower is 25.737265415549597.
+
