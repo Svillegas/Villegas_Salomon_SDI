@@ -87,7 +87,13 @@ function V_HP( t, r ){
     console.log( "The vehicle's horsepower is " + v_calc + ".");
 
     return (v_calc);
+
+
 }
+
+V_HP(999, 9999 );
+
+// alternate calculation made in the console
 
 alert("Your vehicle's horsepower is " + V_HP_total + ".");
 
@@ -124,7 +130,7 @@ while(!valid) {
 
 //****
 
-var E_HP = function V_HP( v, a, e ){
+var E_HP = function e_HP( v, a, e ){
 
     var Uni_reading = 746;
     // because the equation to calculate HP is volts * amps * efficiency/746 which is just a universal reading to calculate it.
@@ -144,7 +150,11 @@ var E_HP = function V_HP( v, a, e ){
  var E_HP_total = E_HP(V_volts, V_amps, V_efficency);
 console.log(E_HP_total);
 
-alert("Your vehicle's horsepower is " + E_HP_total + ".");
+E_HP(999, 999, 99 )
+
+
+
+alert("Your vehicle's electric horsepower is " + E_HP_total + ".");
 
 
 
@@ -153,15 +163,28 @@ alert("Your vehicle's horsepower is " + E_HP_total + ".");
 
 //-----------------//
 
-//BMW was entered in the vehicle brand prompt
-//78645312098465132 was entered in the VIN prompt
-//450 was entered in the torque prompt
+// BMW was entered in the vehicle brand prompt
+// 78645312098465132 was entered in the VIN prompt
+// 450 was entered in the torque prompt
 // 4500 was entered in the rpms prompt
 // The vehicle's horsepower is 385.56740289413557.
 
-//240 was entered in the volts prompt
+// 240 was entered in the volts prompt
 // 100 was entered in the amps prompt
 // 80 was entered in the Efficiency prompt
 // 80 was converted to 0.8 for proper calculation
 // The vehicle's horsepower is 25.737265415549597.
+
+//Alternate calculations
+
+// 78645312098465132 was entered in the VIN prompt
+// 999 was entered in the torque prompt
+// 9999 was entered in the rpms prompt
+// The vehicle's horsepower is 1901.9423076923076 .
+
+// 999 was entered in the volts prompt
+// 999 was entered in the amps prompt
+// 99 was entered in the Efficiency prompt
+// 99 was converted to 0.99 for proper calculation
+// The vehicle's horsepower is 1324.4249195710456.
 
