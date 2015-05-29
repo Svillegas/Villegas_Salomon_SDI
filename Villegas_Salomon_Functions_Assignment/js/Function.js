@@ -97,6 +97,31 @@ alert("Your vehicle's horsepower is " + V_HP_total + ".");
 
 alert("Now we will be calculating the horsepower for electric vehicle");
 
+var V_volts, valid=false;
+while(!valid) {
+    V_volts = prompt("Please enter the vehicle's voltage output", "");
+    valid = (validation_Req(V_volts) && v_Num(V_volts) && valLen(V_volts, 3))
+
+    //user enters value for volts 100-999 otherwise it restarts the prompt
+};
+
+
+var V_amps, valid=false;
+while(!valid) {
+    V_amps = prompt("Please enter the vehicle's amount of amperage or 'amps' output", "");
+    valid = (validation_Req(V_amps) && v_Num(V_amps) && valLen(V_amps, 3|2))
+
+    //user enters value for amps 10-99 otherwise it restarts the prompt
+};
+
+var V_efficency, valid=false;
+while(!valid) {
+    V_efficency = prompt("Please enter the vehicle's efficiency percentage", "");
+    valid = (validation_Req(V_efficency) && v_Num(V_efficency) && valLen(V_efficency, 3|2))
+
+    //user enters value for amps 10-99 otherwise it restarts the prompt
+};
+
 
 
 
