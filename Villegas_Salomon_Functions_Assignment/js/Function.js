@@ -1,3 +1,5 @@
+// Functions Assignment by Salomon Villegas created on 05/28/2015
+
 /******
  *Functions used for validating form entries
  */
